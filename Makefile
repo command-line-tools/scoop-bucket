@@ -1,9 +1,9 @@
 
 check:
-	pwsh ~/scoop/apps/scoop/current/bin/checkver.ps1 "*" -dir .
+	pwsh ./bin/checkver.ps1 "*"
 
 update:
-	pwsh ~/scoop/apps/scoop/current/bin/checkver.ps1 "*" -dir . -u
+	pwsh ./bin/checkver.ps1 "*" -u
 
 autopr:
-	pwsh ~/scoop/apps/scoop/current/bin/auto-pr.ps1 -dir . -push -upstream "command-line-tools/scoop:master"
+	pwsh ./bin/auto-pr.ps1 -push -upstream "command-line-tools/scoop:master"
