@@ -1,0 +1,22 @@
+name: Scoop-Updater
+
+on: push
+
+jobs:
+  scoop-updater:
+    name: Update scoop bucket
+    runs-on: windows-latest
+
+    steps:
+        - name: Checkout
+          uses: actions/checkout@v2
+
+        - name: Checkout scoop
+          uses: actions/checkout@v2
+          with:
+            repository: lukesampson/scoop
+            path: scoop
+
+        - name: Run auto pr
+          run: pwsh ./scoop/bin/auto-pr.ps1 -dir ./bucket -push -upstream "command-line-tools/scoop:master"
+
