@@ -9,4 +9,4 @@ update: scoop
 	pwsh ./scoop/bin/checkver.ps1 "*" -dir ./bucket -u
 
 autopr: scoop
-	pwsh ./scoop/bin/auto-pr.ps1 -dir ./bucket -push -upstream "command-line-tools/scoop:master"
+	pwsh ./scoop/bin/auto-pr.ps1 -dir ./bucket -push -upstream "command-line-tools/scoop-bucket:master"

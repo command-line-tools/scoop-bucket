@@ -8,7 +8,7 @@ How do I install these manifests?
 
 Just add the bucket to scoop:
 
- `scoop bucket add command-line-tools https://github.com/command-line-tools/scoop`
+ `scoop bucket add command-line-tools https://github.com/command-line-tools/scoop-bucket`
 
  and then
 

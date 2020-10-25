@@ -3,7 +3,7 @@ name: Scoop-Updater
 on:
     push:
     schedule:
-        - cron:  '0 */12 * * *'
+        - cron:  '0 */6 * * *'
 
 jobs:
   scoop-updater:
@@ -21,5 +21,5 @@ jobs:
             path: scoop
 
         - name: Run auto pr
-          run: pwsh ./scoop/bin/auto-pr.ps1 -dir ./bucket -push -upstream "command-line-tools/scoop:master"
+          run: pwsh ./scoop/bin/auto-pr.ps1 -dir ./bucket -push -upstream "command-line-tools/scoop-bucket:master"
 
